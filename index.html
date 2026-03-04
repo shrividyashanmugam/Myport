@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Three Sections</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #D96868;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .header {
+            text-align: center;
+            color: #111111;
+            padding: 20px;
+            border: #050505 solid 10px;
+            background-color: #D96868;
+            flex-shrink: 0;
+        }
+        .header:hover {
+            background-color: #6A7E3F;
+            color: white;
+        }
+        .main-content {
+            display: flex;
+            flex: 1;  
+        }
+        
+        .sidebar {
+            background-color: #FBF6F6;
+            padding: 50px 20px;
+            width: 300px;
+            flex-shrink: 0;  
+            border: 2px solid #070606;
+            border-radius: 15px;
+            text-align: center;
+            margin: 20px;
+            height: 1520px;
+            align-self: flex-start;  
+        }
+        .sidebar h2 {
+            color: #111111;
+            margin-bottom: 20px;
+        }
+        .sidebar:hover h2 {
+            color: #f9f8f9;
+        }
+        .sidebar:hover {
+            background-color: #4C5C2D;
+            border-color: #151415;
+            color:white;
+        }
+        
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 20%;
+            border: 3px solid #222222;
+            margin-bottom: 15px;
+        }
+        
+       
+        .container {
+            flex: 1;  
+            display: grid;
+            grid-template-columns: 1fr 1fr;  
+            grid-template-rows: repeat(3, 1fr);  
+            gap: 20px;
+            padding: 20px;
+            margin: 20px;
+        }
+        
+        .card {
+            border: 2px solid #070606;
+            padding: 20px;
+            border-radius: 15px 20px;
+            background-color: #FBF6F6;
+            text-align: center;
+            height: 100%;  
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card:hover {
+            background-color: #4C5C2D;
+            border-color: #0a0a0a;
+            color:white
+        }
+        
+        .card h1 {
+            color: #111111;
+            margin: 0 0 15px 0;
+            font-size: 1.4em;
+        }
+        .card h1:hover {
+            color: #f9f8f9;
+        }
+        
+        .card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            margin: 10px auto;
+            border: 2px solid #222222;
+        }
+        
+        .card p {
+            margin: 8px 0;
+            line-height: 1.5;
+            font-size: 1em;
+        }
+
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #D96868;
+            border: #100f10 solid 5px;
+            color: #111;
+            flex-shrink: 0;
+            margin: 0 20px 20px 20px;
+        }
+        .footer:hover
+        {
+            background-color: #6A7E3F;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            .sidebar, .container {
+                margin: 10px;
+                width: auto;
+            }
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(5, 1fr);
+            }
+        }
+        .project-item {
+    margin: 12px 0;
+    padding: 8px 0;
+}
+
+.project-item p {
+    margin: 0 0 6px 0;
+    font-weight: bold;
+}
+
+.project-item a {
+    color: #111011;
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 4px 8px;
+    border: 1px solid #dc8edc;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.project-item a:hover {
+    background-color: #6A7E3F;
+    color: white;
+}
+.contact{
+    margin: 8px 0;
+    font-size: 1em;
+}
+.contact a {
+    color: #121112;
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 4px 8px;
+    border: 1px solid #dc8edc;  
+    border-radius: 5px;
+    display: inline-block;
+}
+.contact a:hover {
+    background-color: #6A7E3F;
+    color: rgb(228, 32, 170);
+}
+.contact p {
+    margin: 8px 0;  
+    font-size: 1em;
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Shri Vidya Shanmugam's Portfolio</h1>
+    </header>
+    
+    <div class="main-content">
+        <div class="sidebar">
+            <img src="assests/shri.png" alt="Shri Vidya Profile" class="profile-pic">
+            <h2><strong> ShriVidya Shanmugam</strong></h2><br>
+            <p>Basic Details</p><br>
+            <p>Education</p><br>
+            <p>Family</p><br>
+            <p>Achievements</p><br>
+            <p>Skills</p><br>
+            <p>Projects</p><br>
+        </div>
+        <div class="container">
+            <div class="card">
+                <h1>Basic Details</h1>
+                <img src="assests/basic.png" alt="Basic Details"/>
+                <p><strong>Shri Vidya Shanmugam</strong></p>
+                <p>19 • Female</p>
+                <p>5A, M G Road<br>Coimbatore, Tamil Nadu</p>
+            </div>
+            <div class="card">
+                <h1>Educational Details</h1>
+                <img src="assests/education.png" alt="Education"/>
+                <p><strong>B.Tech CSBS</strong></p>
+                <p>CGPA: 8.62</p>
+                <p>2024-2028</p>
+            </div>
+            <div class="card">
+                <h1>Family</h1>
+                <img src="assests/family.png" alt="Family"/>
+                <p><strong>Shanmuga Sundaram</strong><br>Office Admin</p>
+                <p><strong>Indra Priyadarshini</strong><br>Homemaker</p>
+            </div>
+            <div class="card">
+                <h1>Achievements</h1>
+                <img src="assests/achivement.png" alt="Achievements"/>
+                <p><strong>Diploma Bharathanatyam</strong></p>
+                <p><strong>BFA Fine Arts</strong></p>
+                <p>NPTEL Course Waiver</p>
+            </div>
+            <div class="card">
+                <h1>Skills</h1>
+                <img src="assests/skill.png" alt="Skills"/>
+                <p><strong>Programming:</strong><br>Python, Java, C</p>
+                <p><strong>Web:</strong><br>HTML, CSS</p>
+            </div>
+            <div class="card">
+                <h1>Projects</h1>
+                <img src="assests/project.png" alt="Projects"/>
+                <div class="project-item">
+                    <p>Stock Trading System</p>
+                    <a href="https://github.com/shrividyashanmugam/CodeAlpha_StockTradingPlatform.git" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-item">
+                    <p>Hotel Reservation</p>
+                    <a href="https://github.com/shrividyashanmugam/CodeAlpha_HotelReservationSystem.git" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-item">
+                    <p>Grade Tracker</p>
+                    <a href="https://github.com/shrividyashanmugam/CodeAlpha_StudentGradeTracker.git" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p class="contact">Linkedin: <a href="https://www.linkedin.com/in/shrividyashanmugam" target="_blank">click here</a></p>
+        <p class="contact">GitHub: <a href="https://github.com/shrividyashanmugam" target="_blank">click here</a></p>
+    </footer>
+</body>
+</html>
